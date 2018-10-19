@@ -2,7 +2,7 @@ package widgets;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Iterator;
+
 
 public class WidgetFactory {
 	private  List<wigets> lstWidgetsFabricados=new ArrayList<wigets>();
@@ -123,7 +123,8 @@ public class WidgetFactory {
    cantidad = 0;
     }
 
-    public Iterator<wigets> getWidgetsFactory(){
-		return lstWidgetsFabricados.stream().filter( s -> s.dispached).iterator();
+    public List<wigets> getWidgetsFactory(){
+		//return lstWidgetsFabricados.stream().filter( s -> s.dispached).iterator();
+    	return lstWidgetsFabricados;
 	}
 }

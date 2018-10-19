@@ -19,7 +19,7 @@ package widgets;
 import org.apache.qpid.amqp_1_0.jms.impl.*;
 import javax.jms.*;
 import java.io.*;
-import java.util.Iterator;
+import java.util.List;
 
 class Publisher {
 
@@ -72,9 +72,9 @@ class Publisher {
         	if(terminar==1) {
         		break;
         	}
-        	 Iterator<wigets> listaWidgets= listener.getWidgetsFactory();
-        	 while(listaWidgets.hasNext()) {
-        		 wigets w = (wigets) listaWidgets.next();
+        	 List<wigets> listaWidgets= listener.getWidgetsFactory();
+        	 while(wigets w : listaWidgets) {
+        		
         		 System.out.println("WIDGETS SOLICITADOS ID:" + w.ID + " Nombre:" + w.Name);
         	 }
         }

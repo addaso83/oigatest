@@ -18,7 +18,7 @@ package widgets;
 import org.apache.qpid.amqp_1_0.jms.impl.*;
 import javax.jms.*;
 import java.util.List;
-import java.util.Iterator;;
+
 
 
 public class Listener {	
@@ -68,7 +68,7 @@ public class Listener {
     }
     
     
-	public Iterator<wigets> getWidgetsFactory(){
+	public List<wigets> getWidgetsFactory(){
 		WidgetFactory widget= new WidgetFactory();
 		return widget.getWidgetsFactory();
 	}
